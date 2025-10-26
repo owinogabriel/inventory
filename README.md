@@ -1,2 +1,2 @@
-- [ ] TODO
-- [ ] Design && Intergrate Auth pages 
+- [ ] TODO:
+ - [ ] Design && Intergrate Auth pages.
