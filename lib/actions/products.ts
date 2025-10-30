@@ -1,5 +1,7 @@
 "use server";
 
+// server action for deletingProducts
+
 import { getCurrentUser } from "../auth";
 import { prisma } from "../prisma";
 
