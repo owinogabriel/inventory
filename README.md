@@ -1,4 +1,4 @@
 - [ ] TODO:
- - [ ]  Design sidebar
- - [ ] 
- - [ ]
+ - [ ] Design sidebar && its components fully functional
+ - [ ] Test the project
+ - [ ]  Deploy using vercel
