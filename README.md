@@ -1,4 +1,4 @@
 - [ ] TODO:
- - [ ] Design && Intergrate Auth pages.✅
- - [ ] Create a db schema and migrate it to neon.✅
- - [ ] Design sidebar
+ - [ ]  Design sidebar
+ - [ ] 
+ - [ ]
