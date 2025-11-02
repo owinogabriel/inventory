@@ -1,4 +1,4 @@
-- [ ] TODO:
- - [ ] Design sidebar && its components fully functional
- - [ ] Test the project
- - [ ]  Deploy using vercel
+ - [ ] TODO:
+      - [ ] Test the app
+      - [ ] Finalise any pending task.
+      - [ ] Deploy the work
