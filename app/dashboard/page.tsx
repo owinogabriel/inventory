@@ -51,16 +51,16 @@ export default async function DashboardPage() {
   // Calculate the total inventory value: SUM(price * quantity)
   const totalValue = allProducts.reduce(
     (sum, product) => sum + Number(product.price) * Number(product.quantity),
-    0
+    0,
   );
 
   // --- Stock Level Breakdown (Based on quantity <= 5 logic) ---
   const inStockCount = allProducts.filter((p) => Number(p.quantity) > 5).length;
   const lowStockCount = allProducts.filter(
-    (p) => Number(p.quantity) <= 5 && Number(p.quantity) >= 1
+    (p) => Number(p.quantity) <= 5 && Number(p.quantity) >= 1,
   ).length;
   const outOfStockCount = allProducts.filter(
-    (p) => Number(p.quantity) === 0
+    (p) => Number(p.quantity) === 0,
   ).length;
 
   // Calculate percentages for the 'Efficiency' chart.
@@ -93,7 +93,7 @@ export default async function DashboardPage() {
     // Format the label as MM/DD.
     const weekLabel = `${String(weekStart.getMonth() + 1).padStart(
       2,
-      "0"
+      "0",
     )}/${String(weekStart.getDate()).padStart(2, "0")}`;
 
     // Filter the locally fetched 'allProducts' to count products created in this week.
@@ -219,8 +219,8 @@ export default async function DashboardPage() {
                   product.quantity === 0
                     ? 0 // Out of Stock
                     : product.quantity <= threshold
-                    ? 1 // Low Stock
-                    : 2; // In Stock
+                      ? 1 // Low Stock
+                      : 2; // In Stock
 
                 const bgColors = [
                   "bg-red-600", // 0
