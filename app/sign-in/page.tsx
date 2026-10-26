@@ -1,8 +1,15 @@
+import { stackServerApp } from "@/stack/server";
 import { SignIn } from "@stackframe/stack";
+
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import React from "react";
 
-export default function SignInPage() {
+export default async function SignInPage() {
+  const user = await stackServerApp.getUser();
+  if(user){
+    redirect("/dashboard");
+  }
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-purple-50 to-purple-100">
       <div className="max-w-md w-full space-x-8">
