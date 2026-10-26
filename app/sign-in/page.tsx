@@ -1,9 +1,7 @@
 import { stackServerApp } from "@/stack/server";
 import { SignIn } from "@stackframe/stack";
-
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import React from "react";
 
 export default async function SignInPage() {
   const user = await stackServerApp.getUser();
