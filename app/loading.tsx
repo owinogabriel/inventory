@@ -1,4 +1,3 @@
-
 // Skeleton component to show a loading state
 function Skeleton({ className = "" }: { className?: string }) {
   return (
