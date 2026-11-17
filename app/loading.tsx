@@ -1,6 +1,9 @@
+"use client";
+
 import { UserButton } from "@stackframe/stack";
 import { BarChart3, Package, Plus, Settings } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 // Skeleton component to show a loading state
 function Skeleton({ className = "" }: { className?: string }) {
@@ -34,10 +37,10 @@ function LoadingSidebar() {
         {navigation.map((item) => {
           const IconComponent = item.icon;
           return (
-            <link>
+            <Link key={item.name} href={item.href}>
               <IconComponent className="w-5 h-5 " />
               <span className="text-sm">{item.name}</span>
-            </link>
+            </Link>
           );
         })}
       </nav>
@@ -151,7 +154,8 @@ export default function Loading() {
   const showSidebar = !["/sign-in", "/sign-up"].includes(pathname);
   return (
     <div className="min-h-screen bg-gray-50">
-      {showSidebar && <LoadingSidebar />} {/* Render the sidebar only if showSidebar is true */}
+      {showSidebar && <LoadingSidebar />}{" "}
+      {/* Render the sidebar only if showSidebar is true */}
       <MainContentSkeleton showSidebar={showSidebar} />
     </div>
   );
