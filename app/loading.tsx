@@ -149,11 +149,9 @@ export default function Loading() {
 
   // Don't  show sidebar on public routes
   const showSidebar = !["/sign-in", "/sign-up"].includes(pathname);
-  // Stack uses React Suspense, which will render this page while user data is being fetched.
-  // See: https://nextjs.org/docs/app/api-reference/file-conventions/loading
   return (
     <div className="min-h-screen bg-gray-50">
-      {showSidebar && <LoadingSidebar />}
+      {showSidebar && <LoadingSidebar />} {/* Render the sidebar only if showSidebar is true */}
       <MainContentSkeleton showSidebar={showSidebar} />
     </div>
   );
